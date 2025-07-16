@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KnolastnameCrew</title>
+  <style>
+    @font-face {
+      font-family: 'CustomFont';
+      src: url('font.ttf') format('truetype');
+    }
+
+    body {
+      margin: 0;
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: 'CustomFont', sans-serif;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .x {
+      font-size: 100px;
+      font-weight: bold;
+      color: #fff;
+      line-height: 1;
+      user-select: none;
+    }
+
+    img {
+      max-width: 35vw;
+      height: auto;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      img {
+        max-width: 80vw;
+      }
+
+      .x {
+        font-size: 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="https://knolastnamecrew.github.io/" target="_blank">
+      <img src="logo.png" alt="Logo 1">
+    </a>
+    <div class="x">X</div>
+    <a href="https://knolastnamecrew.github.io/projectpup/" target="_blank">
+      <img src="logo2.png" alt="Logo 2">
+    </a>
+  </div>
+</body>
+</html>
