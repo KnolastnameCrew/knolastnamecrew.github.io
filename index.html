@@ -18,13 +18,17 @@
       align-items: center;
       justify-content: center;
       height: 100vh;
-      font-family: 'CustomFont', sans-serif;
+      font-family: 'CustomFont', 'Segoe UI', sans-serif;
+      overflow: hidden;
     }
 
     .container {
       display: flex;
       align-items: center;
       gap: 60px;
+      animation: fadeUp 1s ease forwards;
+      opacity: 0;
+      transform: translateY(30px);
     }
 
     .x {
@@ -33,12 +37,33 @@
       color: #fff;
       line-height: 1;
       user-select: none;
+      transition: color 0.3s;
     }
 
-    img {
+    .x:hover {
+      color: #888;
+    }
+
+    .logo {
       max-width: 35vw;
       height: auto;
       cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .logo:hover {
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     @media (max-width: 768px) {
@@ -47,7 +72,7 @@
         gap: 30px;
       }
 
-      img {
+      .logo {
         max-width: 80vw;
       }
 
@@ -55,16 +80,26 @@
         font-size: 60px;
       }
     }
+
+    @media (max-width: 350px) {
+      .x {
+        font-size: 40px;
+      }
+
+      .container {
+        gap: 20px;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <a href="https://knolastnamecrew.github.io/" target="_blank">
-      <img src="logo.png" alt="Logo 1">
+    <a href="https://knolastnamecrew.github.io/" target="_blank" rel="noopener noreferrer" aria-label="Site principal">
+      <img class="logo" src="logo.png" alt="Logo 1">
     </a>
     <div class="x">X</div>
-    <a href="https://knolastnamecrew.github.io/projectpup/" target="_blank">
-      <img src="logo2.png" alt="Logo 2">
+    <a href="https://knolastnamecrew.github.io/projectpup/" target="_blank" rel="noopener noreferrer" aria-label="Project P.U.P">
+      <img class="logo" src="logo2.png" alt="Logo 2">
     </a>
   </div>
 </body>
